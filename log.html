@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Files · The Name of This App Is a Secret</title>
+  <meta name="description" content="Your case files — a reading log and wish list kept by the archivist.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Courier+Prime:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="page">
+
+  <!-- ===== HEADER (shared) ===== -->
+  <header class="site-head">
+    <div class="classification-banner secret-only">Restricted · Reading Room · Archive Access Only</div>
+    <div class="masthead">
+      <div>
+        <h1>The Name of This App Is a Secret</h1>
+        <p class="masthead-sub secret-only">Archive · Reading Room · Est. ▮▮▮▮</p>
+        <p class="masthead-sub disguise-only">A book club for thriller &amp; science fiction readers</p>
+      </div>
+      <div class="control-block secret-only">
+        <span>FILE NO. 0042</span>
+        <span>ARCHIVIST ▮▮▮▮▮▮▮</span>
+        <span>LOGGED 03 · NOV · 2026</span>
+      </div>
+    </div>
+    <div class="rule-double"></div>
+    <nav class="main-nav">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Reading Room</a></li>
+        <li><a href="current.html">Current File</a></li>
+        <li><a href="log.html" class="active">Case Files</a></li>
+        <li><a href="dossier.html">A Dossier</a></li>
+      </ul>
+      <button class="reveal-toggle" id="revealToggle" aria-pressed="true">View as Book Club</button>
+      <button class="nav-toggle" id="navToggle">Menu</button>
+    </nav>
+    <div class="rule-double"></div>
+  </header>
+
+  <!-- ===== CASE FILES ===== -->
+  <section class="section container">
+    <div class="log-head">
+      <div>
+        <p class="section-label secret-only">Your case files</p>
+        <p class="section-label disguise-only" style="display:none">Your reading log</p>
+        <h2>What you’ve read, and what you mean to</h2>
+      </div>
+      <div class="member-id">
+        <strong data-member-codename>—</strong>
+        <span data-member-number>—</span><br>
+        <span data-case-count>0 files on record</span>
+      </div>
+    </div>
+
+    <!-- seed a starter entry so the log isn't empty on first view -->
+    <div class="filter-row" data-casefile="0042">
+      <button class="pill" data-status="want">Wish list</button>
+      <button class="pill" data-status="reading">Reading</button>
+      <button class="pill" data-status="finished">Finished</button>
+      <a class="btn btn--ghost" href="dossier.html" style="margin-left:auto;">Open dossier</a>
+    </div>
+
+    <article class="case-card" data-casefile="0042" style="margin-top:1rem;">
+      <div class="sheet">
+        <div>
+          <div class="case-meta">File 0042</div>
+          <a class="case-title" href="dossier.html">Annihilation</a>
+          <div class="case-author">Jeff VanderMeer</div>
+          <div class="case-status" data-status-badge="0042"></div>
+        </div>
+      </div>
+      <div class="verdict" style="margin:0;width:100%;">
+        <textarea data-verdict placeholder="Leave your verdict — the archivist will keep it."></textarea>
+      </div>
+    </article>
+
+    <div class="case-list" id="caseList"></div>
+
+    <div class="empty-state hidden" id="caseEmpty">
+      <p class="italic">No other files yet.</p>
+      <p>The archive grows as you read. Open a dossier and mark it — want, reading, or finished — and it appears here, kept by the archivist.</p>
+      <a class="btn mt-sm" href="index.html">Browse the shelves</a>
+    </div>
+
+    <!-- suggested next reads -->
+    <div class="mt-lg">
+      <p class="sub-label">The archive suggests</p>
+      <div class="related-grid">
+        <a class="related-card" href="dossier.html?id=0204">
+          <div class="sheet">
+            <div class="related-meta">Fantasy · the archive</div>
+            <h3>Piranesi</h3>
+            <p class="rel-author">Susanna Clarke</p>
+            <span class="stamp stamp--related secret-only">Suggested<span class="stamp-sub">F-0204</span></span>
+          </div>
+        </a>
+        <a class="related-card" href="dossier.html?id=0117">
+          <div class="sheet">
+            <div class="related-meta">Sci-fi · first contact</div>
+            <h3>Roadside Picnic</h3>
+            <p class="rel-author">Arkady &amp; Boris Strugatsky</p>
+            <span class="stamp stamp--related secret-only">Suggested<span class="stamp-sub">F-0117</span></span>
+          </div>
+        </a>
+        <a class="related-card" href="dossier.html?id=0089">
+          <div class="sheet">
+            <div class="related-meta">Sci-fi · diplomacy</div>
+            <h3>The Left Hand of Darkness</h3>
+            <p class="rel-author">Ursula K. Le Guin</p>
+            <span class="stamp stamp--related secret-only">Suggested<span class="stamp-sub">F-0089</span></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER (shared) ===== -->
+  <footer class="site-foot">
+    <p class="foot-line">The archivist keeps the record — one file at a time.</p>
+    <div class="classification-banner secret-only" style="max-width:1180px;margin:0 auto;">Restricted · Reading Room · Archive Access Only</div>
+  </footer>
+
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>

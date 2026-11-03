@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Current File · The Name of This App Is a Secret</title>
+  <meta name="description" content="The file the whole reading room is on right now.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Courier+Prime:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="page">
+
+  <!-- ===== HEADER (shared) ===== -->
+  <header class="site-head">
+    <div class="classification-banner secret-only">Restricted · Reading Room · Archive Access Only</div>
+    <div class="masthead">
+      <div>
+        <h1>The Name of This App Is a Secret</h1>
+        <p class="masthead-sub secret-only">Archive · Reading Room · Est. ▮▮▮▮</p>
+        <p class="masthead-sub disguise-only">A book club for thriller &amp; science fiction readers</p>
+      </div>
+      <div class="control-block secret-only">
+        <span>FILE NO. 0042</span>
+        <span>ARCHIVIST ▮▮▮▮▮▮▮</span>
+        <span>LOGGED 03 · NOV · 2026</span>
+      </div>
+    </div>
+    <div class="rule-double"></div>
+    <nav class="main-nav">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Reading Room</a></li>
+        <li><a href="current.html" class="active">Current File</a></li>
+        <li><a href="log.html">Case Files</a></li>
+        <li><a href="dossier.html">A Dossier</a></li>
+      </ul>
+      <button class="reveal-toggle" id="revealToggle" aria-pressed="true">View as Book Club</button>
+      <button class="nav-toggle" id="navToggle">Menu</button>
+    </nav>
+    <div class="rule-double"></div>
+  </header>
+
+  <!-- ===== CURRENT FILE ===== -->
+  <section class="section container">
+    <p class="section-label secret-only">Current file · active</p>
+    <p class="section-label disguise-only" style="display:none">This month’s pick</p>
+    <h2 class="mb">What the room is reading now</h2>
+
+    <div class="folder">
+      <div class="folder-tab secret-only">Active file · 0042</div>
+      <div class="sheet" data-casefile="0042">
+        <div class="row between">
+          <div style="flex:1;min-width:240px;">
+            <div class="sheet-meta secret-only">Subject — fiction / science fiction / slow dread</div>
+            <div class="disguise-only" style="font-family:var(--font-mono);font-size:.75rem;letter-spacing:2px;color:var(--sepia);text-transform:uppercase;margin-bottom:.6rem;">Everyone in the club is on this one</div>
+            <h2 class="book-title">Annihilation</h2>
+            <p class="book-author">Jeff VanderMeer</p>
+            <p class="book-tagline">“The twelfth expedition enters. The biologist keeps her own record.”</p>
+            <div class="book-brief">
+              <p>Four women cross into a stretch of coast where biology has stopped obeying itself.</p>
+              <p>Read along — the room keeps a shared record of what we notice as we go.</p>
+            </div>
+            <div class="status-row">
+              <button class="pill" data-status="reading">I’m reading this</button>
+              <button class="pill" data-status="want">Add to wish list</button>
+              <button class="pill" data-status="finished">I’ve finished</button>
+            </div>
+            <div class="status-row">
+              <a class="btn" href="dossier.html">Open the full dossier</a>
+              <span class="case-status muted" data-status-badge="0042"></span>
+            </div>
+          </div>
+          <span class="stamp stamp--declassified secret-only">Declassified<span class="stamp-sub">03 · NOV · 2026</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MEMBER NOTES (seeded) ===== -->
+  <section class="section container">
+    <p class="section-label secret-only">The room — member notes</p>
+    <p class="section-label disguise-only" style="display:none">What members are saying</p>
+    <h2 class="mb">Notes from the room</h2>
+    <div class="dossier-grid">
+      <div class="dossier-main">
+        <div class="sheet">
+          <p class="mono muted" style="font-size:.72rem;letter-spacing:2px;text-transform:uppercase;">Operative Foxglove · 3 days in</p>
+          <p class="italic" style="font-size:1.1rem;margin:.3rem 0;">“The lighthouse scene is the first time the book stops pretending to be a journal. I had to put it down for a full day.”</p>
+        </div>
+        <div class="sheet mt">
+          <p class="mono muted" style="font-size:.72rem;letter-spacing:2px;text-transform:uppercase;">Operative Heron · finished</p>
+          <p class="italic" style="font-size:1.1rem;margin:.3rem 0;">“Read the tower chapter twice. The second time the writing on the wall changes meaning without changing words. That’s the whole trick of the book.”</p>
+        </div>
+        <div class="sheet mt">
+          <p class="mono muted" style="font-size:.72rem;letter-spacing:2px;text-transform:uppercase;">Operative Moth · halfway</p>
+          <p class="italic" style="font-size:1.1rem;margin:.3rem 0;">“It’s not scary the way I expected. It’s lonely. The biologist is the loneliest narrator I’ve read in years.”</p>
+        </div>
+      </div>
+      <aside class="marginalia secret-only">
+        <p class="section-label">The archivist</p>
+        <div class="divider"></div>
+        <p>Welcome to the active file. You arrived in time — the room is still mid-read, so your notes will land among ours.</p>
+        <p>Don’t read ahead of the group if you can help it. The dread works best when everyone turns the same page at once.</p>
+        <p>When you finish, file your verdict. I read every one.</p>
+        <p class="archivist-sig mt">— A.</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER (shared) ===== -->
+  <footer class="site-foot">
+    <p class="foot-line">The archivist keeps the record — one file at a time.</p>
+    <div class="classification-banner secret-only" style="max-width:1180px;margin:0 auto;">Restricted · Reading Room · Archive Access Only</div>
+  </footer>
+
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>

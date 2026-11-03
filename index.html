@@ -1,23 +1,185 @@
 <!DOCTYPE html>
-<html> lang="en">
+<html lang="en">
 <head>
-     <title>Learning and study log </title>
-     <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Name of This App Is a Secret — Reading Room</title>
+  <meta name="description" content="A book club that happens to be secret. Thriller and science fiction, filed as classified dossiers.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Courier+Prime:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Book Club</h1>
-    <h2>are you an avid reader?</h2>
-    
-    
-    <p>are you new here</p>
-    <a href="signup.html"> <button>sign up</button></a>
-   
-    <p>Do you want view your book history and wish list</p>
-    <a href="login.html"> <button>log in</button></a>
-   
-    
-    <p>Do you want books but cannot afford them now?</p>
-    <a href="https:\\www.theoceanofpdf.com"><button>browse here</button></a>
-    
+<div class="page">
+
+  <!-- ===== HEADER (shared) ===== -->
+  <header class="site-head">
+    <div class="classification-banner secret-only">Restricted · Reading Room · Archive Access Only</div>
+
+    <div class="masthead">
+      <div>
+        <h1>The Name of This App Is a Secret</h1>
+        <p class="masthead-sub secret-only">Archive · Reading Room · Est. ▮▮▮▮</p>
+        <p class="masthead-sub disguise-only">A book club for thriller &amp; science fiction readers</p>
+      </div>
+      <div class="control-block secret-only">
+        <span>FILE NO. 0042</span>
+        <span>ARCHIVIST ▮▮▮▮▮▮▮</span>
+        <span>LOGGED 03 · NOV · 2026</span>
+      </div>
+    </div>
+    <div class="rule-double"></div>
+
+    <nav class="main-nav">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Reading Room</a></li>
+        <li><a href="current.html">Current File</a></li>
+        <li><a href="log.html">Case Files</a></li>
+        <li><a href="dossier.html">A Dossier</a></li>
+      </ul>
+      <button class="reveal-toggle" id="revealToggle" aria-pressed="true">View as Book Club</button>
+      <button class="nav-toggle" id="navToggle">Menu</button>
+    </nav>
+    <div class="rule-double"></div>
+  </header>
+
+  <!-- ===== HERO: CURRENT SELECTION PREVIEW ===== -->
+  <section class="section container">
+    <p class="section-label">Currently reading</p>
+    <div class="folder">
+      <div class="folder-tab secret-only">Active file · 0042</div>
+      <div class="sheet">
+        <div class="row between">
+          <div style="flex:1;min-width:240px;">
+            <div class="sheet-meta secret-only">Subject — fiction / science fiction / slow dread</div>
+            <div class="disguise-only" style="font-family:var(--font-mono);font-size:.75rem;letter-spacing:2px;color:var(--sepia);text-transform:uppercase;margin-bottom:.6rem;">This month's pick</div>
+            <h2 class="book-title">Annihilation</h2>
+            <p class="book-author">Jeff VanderMeer</p>
+            <p class="book-tagline">“The twelfth expedition enters. The biologist keeps her own record.”</p>
+            <div class="book-brief">
+              <p>Four women cross into a stretch of coast where biology has stopped obeying itself.</p>
+              <p>The eleven expeditions before ended in silence, disappearance, or worse.</p>
+            </div>
+            <div class="status-row">
+              <a class="btn" href="current.html">Open the current file</a>
+              <button class="btn btn--ghost" data-add="0042" data-status="want">Add to case files</button>
+            </div>
+          </div>
+          <div class="stamp stamp--declassified stamp-float secret-only">
+            Declassified<span class="stamp-sub">03 · NOV · 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CURATED SHELVES ===== -->
+  <section class="section container">
+    <p class="section-label secret-only">The archive — shelves</p>
+    <p class="section-label disguise-only" style="display:none">Browse by mood</p>
+    <h2 class="mb">Curated shelves</h2>
+    <div class="shelf-grid">
+      <article class="shelf">
+        <div class="shelf-tab secret-only">Shelf · A</div>
+        <h3>Late-Night Reading</h3>
+        <p class="shelf-sub">Books that keep the light on past 2 a.m.</p>
+        <ul>
+          <li><a href="dossier.html">Annihilation</a><span class="spine">F-0042</span></li>
+          <li><a href="dossier.html?id=0089">The Left Hand of Darkness</a><span class="spine">F-0089</span></li>
+          <li><a href="dossier.html?id=0117">Roadside Picnic</a><span class="spine">F-0117</span></li>
+        </ul>
+      </article>
+      <article class="shelf">
+        <div class="shelf-tab secret-only">Shelf · B</div>
+        <h3>Can’t Look Away</h3>
+        <p class="shelf-sub">Slow dread that builds until you can’t put it down.</p>
+        <ul>
+          <li><a href="dossier.html">Annihilation</a><span class="spine">F-0042</span></li>
+          <li><a href="dossier.html?id=0204">Piranesi</a><span class="spine">F-0204</span></li>
+          <li><a href="dossier.html?id=0117">Roadside Picnic</a><span class="spine">F-0117</span></li>
+        </ul>
+      </article>
+      <article class="shelf">
+        <div class="shelf-tab secret-only">Shelf · C</div>
+        <h3>The Archive</h3>
+        <p class="shelf-sub">Books about hidden knowledge and secret records.</p>
+        <ul>
+          <li><a href="dossier.html?id=0204">Piranesi</a><span class="spine">F-0204</span></li>
+          <li><a href="dossier.html">Annihilation</a><span class="spine">F-0042</span></li>
+        </ul>
+      </article>
+      <article class="shelf">
+        <div class="shelf-tab secret-only">Shelf · D</div>
+        <h3>First Contact</h3>
+        <p class="shelf-sub">What we owe the places we can’t understand.</p>
+        <ul>
+          <li><a href="dossier.html?id=0117">Roadside Picnic</a><span class="spine">F-0117</span></li>
+          <li><a href="dossier.html?id=0089">The Left Hand of Darkness</a><span class="spine">F-0089</span></li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== RECENT DOSSIERS TEASER ===== -->
+  <section class="section container">
+    <p class="section-label">Recently declassified</p>
+    <h2 class="mb">Three files worth opening</h2>
+    <div class="related-grid">
+      <a class="related-card" href="dossier.html">
+        <div class="sheet">
+          <div class="related-meta">Sci-fi · first contact</div>
+          <h3>Roadside Picnic</h3>
+          <p class="rel-author">Arkady &amp; Boris Strugatsky</p>
+          <p class="rel-blurb">Six zones where aliens briefly stopped. Men smuggle relics out at a price no one names.</p>
+          <span class="stamp stamp--related secret-only">Related<span class="stamp-sub">F-0117</span></span>
+        </div>
+      </a>
+      <a class="related-card" href="dossier.html?id=0204">
+        <div class="sheet">
+          <div class="related-meta">Fantasy · the archive</div>
+          <h3>Piranesi</h3>
+          <p class="rel-author">Susanna Clarke</p>
+          <p class="rel-blurb">A man lives in an endless Hall of statues and tides, and slowly learns what it hides.</p>
+          <span class="stamp stamp--related secret-only">Related<span class="stamp-sub">F-0204</span></span>
+        </div>
+      </a>
+      <a class="related-card" href="dossier.html?id=0089">
+        <div class="sheet">
+          <div class="related-meta">Sci-fi · diplomacy</div>
+          <h3>The Left Hand of Darkness</h3>
+          <p class="rel-author">Ursula K. Le Guin</p>
+          <p class="rel-blurb">An envoy crosses into a world without fixed gender or trust.</p>
+          <span class="stamp stamp--related secret-only">Related<span class="stamp-sub">F-0089</span></span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== REQUEST ACCESS / MEMBER ===== -->
+  <section class="section container">
+    <div class="sheet center" style="max-width:620px;margin:0 auto;">
+      <p class="section-label secret-only">Membership</p>
+      <p class="section-label disguise-only" style="display:none">Join the club</p>
+      <h2 class="mb-sm">Request a file of your own</h2>
+      <p class="muted">Track what you read, keep a wish list, and leave your verdict on each dossier. The archivist keeps the record.</p>
+      <div class="status-row" style="justify-content:center;">
+        <a class="btn" href="log.html">Open your case files</a>
+        <a class="btn btn--ghost" href="current.html">See the current file</a>
+      </div>
+      <p class="mono muted mt-sm" style="font-size:.72rem;letter-spacing:1px;">
+        Member: <span data-member-codename>—</span> · <span data-member-number>—</span> · <span data-case-count>0 files on record</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER (shared) ===== -->
+  <footer class="site-foot">
+    <p class="foot-line">The archivist keeps the record — one file at a time.</p>
+    <div class="classification-banner secret-only" style="max-width:1180px;margin:0 auto;">Restricted · Reading Room · Archive Access Only</div>
+  </footer>
+
+</div>
+<script src="js/app.js"></script>
 </body>
 </html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dossier — Annihilation · The Name of This App Is a Secret</title>
+  <meta name="description" content="Dossier: a book recommendation filed as a classified case file.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Courier+Prime:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="page">
+
+  <!-- ===== HEADER (shared) ===== -->
+  <header class="site-head">
+    <div class="classification-banner secret-only">Restricted · Reading Room · Archive Access Only</div>
+    <div class="masthead">
+      <div>
+        <h1>The Name of This App Is a Secret</h1>
+        <p class="masthead-sub secret-only">Archive · Reading Room · Est. ▮▮▮▮</p>
+        <p class="masthead-sub disguise-only">A book club for thriller &amp; science fiction readers</p>
+      </div>
+      <div class="control-block secret-only">
+        <span>FILE NO. 0042</span>
+        <span>ARCHIVIST ▮▮▮▮▮▮▮</span>
+        <span>LOGGED 03 · NOV · 2026</span>
+      </div>
+    </div>
+    <div class="rule-double"></div>
+    <nav class="main-nav">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Reading Room</a></li>
+        <li><a href="current.html">Current File</a></li>
+        <li><a href="log.html">Case Files</a></li>
+        <li><a href="dossier.html" class="active">A Dossier</a></li>
+      </ul>
+      <button class="reveal-toggle" id="revealToggle" aria-pressed="true">View as Book Club</button>
+      <button class="nav-toggle" id="navToggle">Menu</button>
+    </nav>
+    <div class="rule-double"></div>
+  </header>
+
+  <!-- ===== DOSSIER ===== -->
+  <section class="section container">
+    <p class="section-label secret-only">Dossier · file 0042</p>
+    <p class="section-label disguise-only" style="display:none">Book recommendation</p>
+
+    <div class="dossier-grid">
+
+      <!-- main column -->
+      <div class="dossier-main">
+        <div class="folder">
+          <div class="folder-tab secret-only">Dossier · 0042</div>
+          <div class="sheet" data-casefile="0042">
+            <div class="row between">
+              <div style="flex:1;min-width:200px;">
+                <div class="sheet-meta secret-only">Subject — fiction / science fiction / slow dread</div>
+                <div class="disguise-only" style="font-family:var(--font-mono);font-size:.75rem;letter-spacing:2px;color:var(--sepia);text-transform:uppercase;margin-bottom:.6rem;">A book worth your time</div>
+                <h2 class="book-title">Annihilation</h2>
+                <p class="book-author">Jeff VanderMeer</p>
+                <p class="book-tagline">“The twelfth expedition enters. The biologist keeps her own record.”</p>
+              </div>
+              <span class="stamp stamp--declassified secret-only">Declassified<span class="stamp-sub">03 · NOV · 2026</span></span>
+            </div>
+
+            <!-- status -->
+            <div class="status-row">
+              <span class="case-status muted" data-status-badge="0042"></span>
+              <button class="pill" data-status="want">Want</button>
+              <button class="pill" data-status="reading">Reading</button>
+              <button class="pill" data-status="finished">Finished</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- intelligence brief -->
+        <div class="mt">
+          <p class="sub-label">Intelligence brief</p>
+          <div class="brief">
+            <p>Area X has expanded for decades without explanation. Each expedition sent in has come back altered, amnesiac, or not at all.</p>
+            <p>The biologist narrates the twelfth — not to explain the zone, but to keep a record of what she cannot fully say.</p>
+            <p>The dread is cumulative, quiet, and hers.</p>
+          </div>
+        </div>
+
+        <!-- analyst's notes with redactions -->
+        <div>
+          <p class="sub-label">Analyst’s notes</p>
+          <div class="brief">
+            <p>Why it’s here — the dread isn’t a monster. There isn’t one, exactly.</p>
+            <p>It lives in how the narrator edits herself, in the silence she keeps about
+              <span class="redaction"><span class="redact-text">what she actually saw</span></span>.</p>
+            <p>Read it for the tone; the surface plot is incidental.
+              <span class="redaction"><span class="redact-text">The ending refuses to resolve, and that refusal is the recommendation</span></span>.</p>
+            <p>Pair it with Roadside Picnic: two answers to one question — what do we owe the places we cannot understand? The two books disagree, and the disagreement is the point.</p>
+          </div>
+          <p class="redaction-hint">Classified lines declassify on a touch or click.</p>
+        </div>
+
+        <!-- handling advisory -->
+        <div>
+          <p class="sub-label">Handling advisory</p>
+          <p class="italic muted" style="font-size:1rem;">Catastrophic body horror is handled by omission, not detail. Read slowly. Recommended for readers who trusted Piranesi and Roadside Picnic.</p>
+        </div>
+
+        <!-- related files -->
+        <div class="mt">
+          <p class="sub-label">Related files — cross-references</p>
+          <div class="related-grid">
+            <a class="related-card" href="dossier.html?id=0117">
+              <div class="sheet">
+                <div class="related-meta">Sci-fi · first contact</div>
+                <h3>Roadside Picnic</h3>
+                <p class="rel-author">Arkady &amp; Boris Strugatsky</p>
+                <span class="stamp stamp--related secret-only">Related<span class="stamp-sub">F-0117</span></span>
+              </div>
+            </a>
+            <a class="related-card" href="dossier.html?id=0204">
+              <div class="sheet">
+                <div class="related-meta">Fantasy · the archive</div>
+                <h3>Piranesi</h3>
+                <p class="rel-author">Susanna Clarke</p>
+                <span class="stamp stamp--related secret-only">Related<span class="stamp-sub">F-0204</span></span>
+              </div>
+            </a>
+            <a class="related-card" href="dossier.html?id=0089">
+              <div class="sheet">
+                <div class="related-meta">Sci-fi · diplomacy</div>
+                <h3>The Left Hand of Darkness</h3>
+                <p class="rel-author">Ursula K. Le Guin</p>
+                <span class="stamp stamp--related secret-only">Related<span class="stamp-sub">F-0089</span></span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- your verdict -->
+        <div class="verdict" data-casefile="0042">
+          <p class="sub-label">Your verdict</p>
+          <textarea data-verdict placeholder="What did you make of it? The archivist will keep your note."></textarea>
+          <p class="redaction-hint mt-sm">Saved to your case files. No account, no server — your record lives in this browser.</p>
+        </div>
+      </div>
+
+      <!-- marginalia -->
+      <aside class="marginalia secret-only">
+        <p class="section-label">The archivist</p>
+        <div class="divider"></div>
+        <p>I worried this one was too quiet for the shelf.</p>
+        <p>It isn’t.</p>
+        <p>Read it slowly, then read it again. The second time you notice the narrator is hiding something you already suspected.</p>
+        <p style="opacity:.5;"><span class="redaction"><span class="redact-text">A deeper note is filed under your name. It will clear when ready.</span></span></p>
+        <p class="archivist-sig mt">— A.</p>
+      </aside>
+
+    </div>
+  </section>
+
+  <!-- ===== FOOTER (shared) ===== -->
+  <footer class="site-foot">
+    <p class="foot-line">The archivist keeps the record — one file at a time.</p>
+    <div class="classification-banner secret-only" style="max-width:1180px;margin:0 auto;">Restricted · Reading Room · Archive Access Only</div>
+  </footer>
+
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>
